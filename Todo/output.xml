@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on darwin)" generated="20231016 16:48:15.400" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo" source="/Users/as19824/Git/Todo/testcases/demo.robot">
+<test id="s1-t1" name="Verify Todo list web page" line="7">
+<kw name="Open broswer and access website" library="TodoListWebpage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${broswer}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231016 16:48:15.481" level="INFO">Opening browser 'chrome' to base url 'https://abhigyank.github.io/To-Do-List/'.</msg>
+<status status="PASS" starttime="20231016 16:48:15.481" endtime="20231016 16:48:20.178"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>To-Do List</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231016 16:48:20.182" level="INFO">Page title is 'To-Do List'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.178" endtime="20231016 16:48:20.182"/>
+</kw>
+<status status="PASS" starttime="20231016 16:48:15.481" endtime="20231016 16:48:20.183"/>
+</kw>
+<kw name="Input Todo Item" library="TodoListWebpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnAddItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.184" level="INFO">Clicking element 'xpath=//a[contains(text(), "Add Item")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.183" endtime="20231016 16:48:20.216"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtNewTask}</arg>
+<arg>Test Input New Task</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.217" level="INFO">Typing text 'Test Input New Task' into text field 'id=new-task'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.216" endtime="20231016 16:48:20.312"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnAdd}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.313" level="INFO">Clicking element 'xpath=//i[contains(text(), "add")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.312" endtime="20231016 16:48:20.331"/>
+</kw>
+<status status="PASS" starttime="20231016 16:48:20.183" endtime="20231016 16:48:20.331"/>
+</kw>
+<kw name="Input Todo Item" library="TodoListWebpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnAddItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.332" level="INFO">Clicking element 'xpath=//a[contains(text(), "Add Item")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.331" endtime="20231016 16:48:20.346"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtNewTask}</arg>
+<arg>Test Input New Task</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.346" level="INFO">Typing text 'Test Input New Task' into text field 'id=new-task'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.346" endtime="20231016 16:48:20.375"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnAdd}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.375" level="INFO">Clicking element 'xpath=//i[contains(text(), "add")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.375" endtime="20231016 16:48:20.389"/>
+</kw>
+<status status="PASS" starttime="20231016 16:48:20.331" endtime="20231016 16:48:20.389"/>
+</kw>
+<kw name="Delete Todo Item" library="TodoListWebpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnTodoItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.389" level="INFO">Clicking element 'xpath=//a[contains(text(), "To-Do Tasks")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.389" endtime="20231016 16:48:20.414"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>text-1</arg>
+<arg>Test Input New Task</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231016 16:48:20.424" level="INFO">Element 'text-1' contains text 'Test Input New Task'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.414" endtime="20231016 16:48:20.424"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="1" and contains(text(), "Delete")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.425" level="INFO">Clicking element 'xpath=//*[@id="1" and contains(text(), "Delete")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.424" endtime="20231016 16:48:20.442"/>
+</kw>
+<status status="PASS" starttime="20231016 16:48:20.389" endtime="20231016 16:48:20.442"/>
+</kw>
+<kw name="Check Todo Item list" library="TodoListWebpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnTodoItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.443" level="INFO">Clicking element 'xpath=//a[contains(text(), "To-Do Tasks")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.442" endtime="20231016 16:48:20.457"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>text-1</arg>
+<arg>Test Input New Task</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231016 16:48:20.463" level="INFO">Element 'text-1' contains text 'Test Input New Task'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.457" endtime="20231016 16:48:20.463"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>text-1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.463" level="INFO">Clicking element 'text-1'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.463" endtime="20231016 16:48:20.480"/>
+</kw>
+<status status="PASS" starttime="20231016 16:48:20.442" endtime="20231016 16:48:20.480"/>
+</kw>
+<kw name="Verify Completed list" library="TodoListWebpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCompletedItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.480" level="INFO">Clicking element 'xpath=//a[contains(text(), "Completed")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.480" endtime="20231016 16:48:20.498"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), "Test Input New Task")]</arg>
+<arg>Test Input New Task</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231016 16:48:20.506" level="INFO">Element 'xpath=//span[contains(text(), "Test Input New Task")]' contains text 'Test Input New Task'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.498" endtime="20231016 16:48:20.506"/>
+</kw>
+<status status="PASS" starttime="20231016 16:48:20.480" endtime="20231016 16:48:20.506"/>
+</kw>
+<kw name="Delete Completed Item" library="TodoListWebpage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCompletedItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.507" level="INFO">Clicking element 'xpath=//a[contains(text(), "Completed")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.507" endtime="20231016 16:48:20.523"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="1" and contains(text(), "Delete")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231016 16:48:20.523" level="INFO">Clicking element 'xpath=//*[@id="1" and contains(text(), "Delete")]'.</msg>
+<status status="PASS" starttime="20231016 16:48:20.523" endtime="20231016 16:48:20.537"/>
+</kw>
+<status status="PASS" starttime="20231016 16:48:20.506" endtime="20231016 16:48:20.537"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231016 16:48:20.538" endtime="20231016 16:48:20.605"/>
+</kw>
+<status status="PASS" starttime="20231016 16:48:15.481" endtime="20231016 16:48:20.605"/>
+</test>
+<status status="PASS" starttime="20231016 16:48:15.401" endtime="20231016 16:48:20.606"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
